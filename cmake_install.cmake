@@ -1,4 +1,4 @@
-# Install script for directory: /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command
+# Install script for directory: /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command_test
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -51,7 +51,7 @@ IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   IF (CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   ENDIF (CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
-FILE(INSTALL DESTINATION "/usr/local" TYPE PROGRAM FILES "/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/catkin_generated/installspace/_setup_util.py")
+FILE(INSTALL DESTINATION "/usr/local" TYPE PROGRAM FILES "/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command_test/catkin_generated/installspace/_setup_util.py")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
@@ -63,7 +63,7 @@ IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   IF (CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   ENDIF (CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
-FILE(INSTALL DESTINATION "/usr/local" TYPE PROGRAM FILES "/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/catkin_generated/installspace/env.sh")
+FILE(INSTALL DESTINATION "/usr/local" TYPE PROGRAM FILES "/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command_test/catkin_generated/installspace/env.sh")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
@@ -75,7 +75,7 @@ IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   IF (CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   ENDIF (CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
-FILE(INSTALL DESTINATION "/usr/local" TYPE FILE FILES "/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/catkin_generated/installspace/setup.bash")
+FILE(INSTALL DESTINATION "/usr/local" TYPE FILE FILES "/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command_test/catkin_generated/installspace/setup.bash")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
@@ -87,7 +87,7 @@ IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   IF (CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   ENDIF (CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
-FILE(INSTALL DESTINATION "/usr/local" TYPE FILE FILES "/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/catkin_generated/installspace/setup.sh")
+FILE(INSTALL DESTINATION "/usr/local" TYPE FILE FILES "/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command_test/catkin_generated/installspace/setup.sh")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
@@ -99,7 +99,7 @@ IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   IF (CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   ENDIF (CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
-FILE(INSTALL DESTINATION "/usr/local" TYPE FILE FILES "/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/catkin_generated/installspace/setup.zsh")
+FILE(INSTALL DESTINATION "/usr/local" TYPE FILE FILES "/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command_test/catkin_generated/installspace/setup.zsh")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
@@ -111,7 +111,7 @@ IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   IF (CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   ENDIF (CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
-FILE(INSTALL DESTINATION "/usr/local" TYPE FILE FILES "/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/catkin_generated/installspace/.rosinstall")
+FILE(INSTALL DESTINATION "/usr/local" TYPE FILE FILES "/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command_test/catkin_generated/installspace/.rosinstall")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
@@ -123,58 +123,23 @@ IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ardrone_command/msg" TYPE FILE FILES
-    "/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/msg/serialized_ardrone_command_part.msg"
-    "/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/msg/serialized_ardrone_command.msg"
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command_test/catkin_generated/installspace/ardrone_command_test.pc")
+ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+
+IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ardrone_command_test/cmake" TYPE FILE FILES
+    "/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command_test/catkin_generated/installspace/ardrone_command_testConfig.cmake"
+    "/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command_test/catkin_generated/installspace/ardrone_command_testConfig-version.cmake"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ardrone_command/srv" TYPE FILE FILES "/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/srv/commandInterface.srv")
-ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-
-IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ardrone_command/cmake" TYPE FILE FILES "/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/catkin_generated/installspace/ardrone_command-msg-paths.cmake")
-ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-
-IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/devel/include/ardrone_command")
-ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-
-IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/devel/share/common-lisp/ros/ardrone_command")
-ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-
-IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  execute_process(COMMAND "/usr/bin/python" -m compileall "/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/devel/lib/python2.7/dist-packages/ardrone_command")
-ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-
-IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/devel/lib/python2.7/dist-packages/ardrone_command")
-ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-
-IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/catkin_generated/installspace/ardrone_command.pc")
-ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-
-IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ardrone_command/cmake" TYPE FILE FILES "/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/catkin_generated/installspace/ardrone_command-msg-extras.cmake")
-ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-
-IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ardrone_command/cmake" TYPE FILE FILES
-    "/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/catkin_generated/installspace/ardrone_commandConfig.cmake"
-    "/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/catkin_generated/installspace/ardrone_commandConfig-version.cmake"
-    )
-ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-
-IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ardrone_command" TYPE FILE FILES "/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/package.xml")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ardrone_command_test" TYPE FILE FILES "/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command_test/package.xml")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  INCLUDE("/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/gtest/cmake_install.cmake")
+  INCLUDE("/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command_test/gtest/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 
@@ -184,7 +149,7 @@ ELSE(CMAKE_INSTALL_COMPONENT)
   SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 ENDIF(CMAKE_INSTALL_COMPONENT)
 
-FILE(WRITE "/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/${CMAKE_INSTALL_MANIFEST}" "")
+FILE(WRITE "/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command_test/${CMAKE_INSTALL_MANIFEST}" "")
 FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  FILE(APPEND "/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  FILE(APPEND "/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command_test/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 ENDFOREACH(file)

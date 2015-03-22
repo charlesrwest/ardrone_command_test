@@ -35,49 +35,19 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command
+CMAKE_SOURCE_DIR = /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command_test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command
+CMAKE_BINARY_DIR = /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command_test
 
 # Utility rule file for ardrone_command_generate_messages_cpp.
 
 # Include the progress variables for this target.
 include CMakeFiles/ardrone_command_generate_messages_cpp.dir/progress.make
 
-CMakeFiles/ardrone_command_generate_messages_cpp: devel/include/ardrone_command/serialized_ardrone_command.h
-CMakeFiles/ardrone_command_generate_messages_cpp: devel/include/ardrone_command/serialized_ardrone_command_part.h
-CMakeFiles/ardrone_command_generate_messages_cpp: devel/include/ardrone_command/commandInterface.h
-
-devel/include/ardrone_command/serialized_ardrone_command.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
-devel/include/ardrone_command/serialized_ardrone_command.h: msg/serialized_ardrone_command.msg
-devel/include/ardrone_command/serialized_ardrone_command.h: msg/serialized_ardrone_command_part.msg
-devel/include/ardrone_command/serialized_ardrone_command.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from ardrone_command/serialized_ardrone_command.msg"
-	catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/msg/serialized_ardrone_command.msg -Iardrone_command:/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p ardrone_command -o /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/devel/include/ardrone_command -e /opt/ros/indigo/share/gencpp/cmake/..
-
-devel/include/ardrone_command/serialized_ardrone_command_part.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
-devel/include/ardrone_command/serialized_ardrone_command_part.h: msg/serialized_ardrone_command_part.msg
-devel/include/ardrone_command/serialized_ardrone_command_part.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from ardrone_command/serialized_ardrone_command_part.msg"
-	catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/msg/serialized_ardrone_command_part.msg -Iardrone_command:/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p ardrone_command -o /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/devel/include/ardrone_command -e /opt/ros/indigo/share/gencpp/cmake/..
-
-devel/include/ardrone_command/commandInterface.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
-devel/include/ardrone_command/commandInterface.h: srv/commandInterface.srv
-devel/include/ardrone_command/commandInterface.h: msg/serialized_ardrone_command.msg
-devel/include/ardrone_command/commandInterface.h: msg/serialized_ardrone_command_part.msg
-devel/include/ardrone_command/commandInterface.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
-devel/include/ardrone_command/commandInterface.h: /opt/ros/indigo/share/gencpp/cmake/../srv.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/CMakeFiles $(CMAKE_PROGRESS_3)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from ardrone_command/commandInterface.srv"
-	catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/srv/commandInterface.srv -Iardrone_command:/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p ardrone_command -o /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/devel/include/ardrone_command -e /opt/ros/indigo/share/gencpp/cmake/..
+CMakeFiles/ardrone_command_generate_messages_cpp:
 
 ardrone_command_generate_messages_cpp: CMakeFiles/ardrone_command_generate_messages_cpp
-ardrone_command_generate_messages_cpp: devel/include/ardrone_command/serialized_ardrone_command.h
-ardrone_command_generate_messages_cpp: devel/include/ardrone_command/serialized_ardrone_command_part.h
-ardrone_command_generate_messages_cpp: devel/include/ardrone_command/commandInterface.h
 ardrone_command_generate_messages_cpp: CMakeFiles/ardrone_command_generate_messages_cpp.dir/build.make
 .PHONY : ardrone_command_generate_messages_cpp
 
@@ -90,6 +60,6 @@ CMakeFiles/ardrone_command_generate_messages_cpp.dir/clean:
 .PHONY : CMakeFiles/ardrone_command_generate_messages_cpp.dir/clean
 
 CMakeFiles/ardrone_command_generate_messages_cpp.dir/depend:
-	cd /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/CMakeFiles/ardrone_command_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command_test && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command_test /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command_test /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command_test /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command_test /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command_test/CMakeFiles/ardrone_command_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ardrone_command_generate_messages_cpp.dir/depend
 

@@ -35,65 +35,19 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command
+CMAKE_SOURCE_DIR = /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command_test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command
+CMAKE_BINARY_DIR = /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command_test
 
 # Utility rule file for ardrone_command_generate_messages_py.
 
 # Include the progress variables for this target.
 include CMakeFiles/ardrone_command_generate_messages_py.dir/progress.make
 
-CMakeFiles/ardrone_command_generate_messages_py: devel/lib/python2.7/dist-packages/ardrone_command/msg/_serialized_ardrone_command.py
-CMakeFiles/ardrone_command_generate_messages_py: devel/lib/python2.7/dist-packages/ardrone_command/msg/_serialized_ardrone_command_part.py
-CMakeFiles/ardrone_command_generate_messages_py: devel/lib/python2.7/dist-packages/ardrone_command/srv/_commandInterface.py
-CMakeFiles/ardrone_command_generate_messages_py: devel/lib/python2.7/dist-packages/ardrone_command/msg/__init__.py
-CMakeFiles/ardrone_command_generate_messages_py: devel/lib/python2.7/dist-packages/ardrone_command/srv/__init__.py
-
-devel/lib/python2.7/dist-packages/ardrone_command/msg/_serialized_ardrone_command.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-devel/lib/python2.7/dist-packages/ardrone_command/msg/_serialized_ardrone_command.py: msg/serialized_ardrone_command.msg
-devel/lib/python2.7/dist-packages/ardrone_command/msg/_serialized_ardrone_command.py: msg/serialized_ardrone_command_part.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG ardrone_command/serialized_ardrone_command"
-	catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/msg/serialized_ardrone_command.msg -Iardrone_command:/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p ardrone_command -o /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/devel/lib/python2.7/dist-packages/ardrone_command/msg
-
-devel/lib/python2.7/dist-packages/ardrone_command/msg/_serialized_ardrone_command_part.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-devel/lib/python2.7/dist-packages/ardrone_command/msg/_serialized_ardrone_command_part.py: msg/serialized_ardrone_command_part.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG ardrone_command/serialized_ardrone_command_part"
-	catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/msg/serialized_ardrone_command_part.msg -Iardrone_command:/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p ardrone_command -o /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/devel/lib/python2.7/dist-packages/ardrone_command/msg
-
-devel/lib/python2.7/dist-packages/ardrone_command/srv/_commandInterface.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py
-devel/lib/python2.7/dist-packages/ardrone_command/srv/_commandInterface.py: srv/commandInterface.srv
-devel/lib/python2.7/dist-packages/ardrone_command/srv/_commandInterface.py: msg/serialized_ardrone_command.msg
-devel/lib/python2.7/dist-packages/ardrone_command/srv/_commandInterface.py: msg/serialized_ardrone_command_part.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/CMakeFiles $(CMAKE_PROGRESS_3)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python code from SRV ardrone_command/commandInterface"
-	catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/srv/commandInterface.srv -Iardrone_command:/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p ardrone_command -o /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/devel/lib/python2.7/dist-packages/ardrone_command/srv
-
-devel/lib/python2.7/dist-packages/ardrone_command/msg/__init__.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-devel/lib/python2.7/dist-packages/ardrone_command/msg/__init__.py: devel/lib/python2.7/dist-packages/ardrone_command/msg/_serialized_ardrone_command.py
-devel/lib/python2.7/dist-packages/ardrone_command/msg/__init__.py: devel/lib/python2.7/dist-packages/ardrone_command/msg/_serialized_ardrone_command_part.py
-devel/lib/python2.7/dist-packages/ardrone_command/msg/__init__.py: devel/lib/python2.7/dist-packages/ardrone_command/srv/_commandInterface.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/CMakeFiles $(CMAKE_PROGRESS_4)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python msg __init__.py for ardrone_command"
-	catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/devel/lib/python2.7/dist-packages/ardrone_command/msg --initpy
-
-devel/lib/python2.7/dist-packages/ardrone_command/srv/__init__.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-devel/lib/python2.7/dist-packages/ardrone_command/srv/__init__.py: devel/lib/python2.7/dist-packages/ardrone_command/msg/_serialized_ardrone_command.py
-devel/lib/python2.7/dist-packages/ardrone_command/srv/__init__.py: devel/lib/python2.7/dist-packages/ardrone_command/msg/_serialized_ardrone_command_part.py
-devel/lib/python2.7/dist-packages/ardrone_command/srv/__init__.py: devel/lib/python2.7/dist-packages/ardrone_command/srv/_commandInterface.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/CMakeFiles $(CMAKE_PROGRESS_5)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python srv __init__.py for ardrone_command"
-	catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/devel/lib/python2.7/dist-packages/ardrone_command/srv --initpy
+CMakeFiles/ardrone_command_generate_messages_py:
 
 ardrone_command_generate_messages_py: CMakeFiles/ardrone_command_generate_messages_py
-ardrone_command_generate_messages_py: devel/lib/python2.7/dist-packages/ardrone_command/msg/_serialized_ardrone_command.py
-ardrone_command_generate_messages_py: devel/lib/python2.7/dist-packages/ardrone_command/msg/_serialized_ardrone_command_part.py
-ardrone_command_generate_messages_py: devel/lib/python2.7/dist-packages/ardrone_command/srv/_commandInterface.py
-ardrone_command_generate_messages_py: devel/lib/python2.7/dist-packages/ardrone_command/msg/__init__.py
-ardrone_command_generate_messages_py: devel/lib/python2.7/dist-packages/ardrone_command/srv/__init__.py
 ardrone_command_generate_messages_py: CMakeFiles/ardrone_command_generate_messages_py.dir/build.make
 .PHONY : ardrone_command_generate_messages_py
 
@@ -106,6 +60,6 @@ CMakeFiles/ardrone_command_generate_messages_py.dir/clean:
 .PHONY : CMakeFiles/ardrone_command_generate_messages_py.dir/clean
 
 CMakeFiles/ardrone_command_generate_messages_py.dir/depend:
-	cd /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command/CMakeFiles/ardrone_command_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command_test && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command_test /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command_test /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command_test /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command_test /home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command_test/CMakeFiles/ardrone_command_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ardrone_command_generate_messages_py.dir/depend
 

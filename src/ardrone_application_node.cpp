@@ -1,275 +1,117 @@
 #include "ros/ros.h"
 #include "std_msgs/Empty.h"
 #include <unistd.h>
-#include "ARDroneControllerNode.hpp"
 #include "ardrone_command/serialized_ardrone_command.h"
 #include "ardrone_command/commandInterface.h"
-
-/*
-This function is used to provide a service which allows other processes on the network to send commands to the AR Drone controlled by this application.  The function will send a response of "true" if the command was successfully added to the queue and "false" otherwise.
-@param inputRequest: The request, which contains a serialized command for the AR drone
-@param inputResponse: The buffer for the function to place the response in
-@return: Always true
-
-@exceptions: This function can throw exceptions.
-*/
-//bool commandReceivedFromNetwork(ardrone_command::commandInterface::Request &inputRequest, ardrone_command::commandInterface::Response &inputResponse);
-
-//Initialize an object for this to point to before initializing the add command service.
-static std::unique_ptr<ARDroneControllerNode> myARDroneControllerNode;
-
+#include "command.hpp"
 
 int main(int argc, char** argv)
 {
 
-printf("Test 1\n");
-printf("Initializing ROS\n");
-ros::init(argc, argv, "droneTime");
 
-//Define image size
-//int imageWidth = 1280;
-//int imageHeight = 720;
-int imageWidth = 640;
-int imageHeight = 360;
+ros::init(argc, argv, "ardrone_command_test");
+ros::NodeHandle nodeHandle;
 
-//Define camera matrix according to webcam calibration (from OpenCV camera calibration file)
-//Scaled values due to the ARDrone's resolution change (from ardrone_autonomy having bad default without option to change)
-cv::Mat_<double> cameraMatrix(3, 3);
-cameraMatrix.at<double>(0,0) =  1.1485540667575478e+03*.5;
-cameraMatrix.at<double>(0,1) = 0.;
-cameraMatrix.at<double>(0,2) = 6.3950000000000000e+02*.5;
-cameraMatrix.at<double>(1,0) =  0.;
-cameraMatrix.at<double>(1,1) = 1.1485540667575478e+03*.5;
-cameraMatrix.at<double>(1,2) = 3.5950000000000000e+02*.5;
-cameraMatrix.at<double>(2,0) = 0.0;
-cameraMatrix.at<double>(2,1) = 0.0; 
-cameraMatrix.at<double>(2,2) = 1.0;
-    
+std::vector<command> commands;
 
-//Define distortion parameters according to webcam calibration (from OpenCV camera calibration file)
-cv::Mat_<double> distortionParameters(1, 5); //k1, k2, p1, p2, k3
-distortionParameters.at<double>(0, 0) = -5.2981696528785138e-01;
-distortionParameters.at<double>(0, 1) = 3.3890562816386838e-01;
-distortionParameters.at<double>(0, 2) =  0.0;
-distortionParameters.at<double>(0, 3) =  0.0;
-distortionParameters.at<double>(0, 4) = -1.1542908311868905e-01;
+command commandWait;
+commandWait.setWaitCommand(2.0);
+commands.push_back(commandWait);
 
 
-
-try
-{
-printf("Initializing controller node\n");
-myARDroneControllerNode.reset(new ARDroneControllerNode(imageWidth, imageHeight, cameraMatrix, distortionParameters));
-printf("Initialization completed\n");
-}
-catch(const std::exception &inputException)
-{
-fprintf(stderr, "%s\n", inputException.what());
-}
-
+//Make commands to send
 command commandTakeoff;
 commandTakeoff.setTakeoffCommand();
-
-printf("Adding takeoff command\n");
-myARDroneControllerNode->addCommand(commandTakeoff);
-printf("Takeoff command added\n");
+commands.push_back(commandTakeoff);
 
 
 command commandSetTargetAltitude;
 commandSetTargetAltitude.setTargetAltitudeCommand(500.0);
-myARDroneControllerNode->addCommand(commandSetTargetAltitude);
+commands.push_back(commandSetTargetAltitude);
 
 command commandWaitUntilTargetAltitudeReached;
 commandWaitUntilTargetAltitudeReached.setWaitUntilAltitudeReached(10.0);
-myARDroneControllerNode->addCommand(commandWaitUntilTargetAltitudeReached);
+commands.push_back(commandWaitUntilTargetAltitudeReached);
 
 command commandWaitForQRCode;
 commandWaitForQRCode.setWaitUntilSpecificQRCodeIsSpottedCommand("BigQRCode", 3.0);
-myARDroneControllerNode->addCommand(commandWaitForQRCode);
+commands.push_back(commandWaitForQRCode);
 
 command commandLookAtQRCodePoint;
 commandLookAtQRCodePoint.setMaintainOrientationTowardSpecificQRCode("BigQRCode");
-myARDroneControllerNode->addCommand(commandLookAtQRCodePoint);
+commands.push_back(commandLookAtQRCodePoint);
 
 command commandGoToQRCodePoint;
 commandGoToQRCodePoint.setMaintainPositionAtSpecificQRCodePoint("BigQRCode", .5, 0.0, 3.0+.5);
-myARDroneControllerNode->addCommand(commandGoToQRCodePoint);
+commands.push_back(commandGoToQRCodePoint);
 
 
 command QRCodePointWait1; QRCodePointWait1.setWaitUntilPositionAtSpecificQRCodePointReachedCommand(10.0);
-myARDroneControllerNode->addCommand(QRCodePointWait1);
+commands.push_back(QRCodePointWait1);
 
 command commandGoToQRCodePoint2;
 commandGoToQRCodePoint2.setMaintainPositionAtSpecificQRCodePoint("BigQRCode", .5, 0.0, 3.0-.5);
-myARDroneControllerNode->addCommand(commandGoToQRCodePoint2);
+commands.push_back(commandGoToQRCodePoint2);
 
-myARDroneControllerNode->addCommand(QRCodePointWait1);
+commands.push_back(QRCodePointWait1);
 
 
 command commandGoToQRCodePoint3;
 commandGoToQRCodePoint3.setMaintainPositionAtSpecificQRCodePoint("BigQRCode", -.5, 0.0, 3.0-.5);
-myARDroneControllerNode->addCommand(commandGoToQRCodePoint3);
+commands.push_back(commandGoToQRCodePoint3);
 
-myARDroneControllerNode->addCommand(QRCodePointWait1);
+commands.push_back(QRCodePointWait1);
 
 
 command commandGoToQRCodePoint4;
 commandGoToQRCodePoint4.setMaintainPositionAtSpecificQRCodePoint("BigQRCode", -.5, 0.0, 3.0+.5);
-myARDroneControllerNode->addCommand(commandGoToQRCodePoint4);
+commands.push_back(commandGoToQRCodePoint4);
 
-myARDroneControllerNode->addCommand(QRCodePointWait1);
+commands.push_back(QRCodePointWait1);
 
 
 command commandGoToQRCodePoint5;
 commandGoToQRCodePoint5.setMaintainPositionAtSpecificQRCodePoint("BigQRCode", .5, 0.0, 3.0+.5);
-myARDroneControllerNode->addCommand(commandGoToQRCodePoint5);
+commands.push_back(commandGoToQRCodePoint5);
 
-myARDroneControllerNode->addCommand(QRCodePointWait1);
+commands.push_back(QRCodePointWait1);
 
+command commandWait2;
+commandWait2.setWaitCommand(2.0);
+commands.push_back(commandWait2);
 
-command commandWait;
-commandWait.setWaitCommand(500.0);
-myARDroneControllerNode->addCommand(commandWait);
-
-
-/*
-command commandWait;
-commandWait.setWaitCommand(500.0);
-myARDroneControllerNode->addCommand(commandWait);
+command commandCancelMaintainPositionAtQRCodePoint;
+commandCancelMaintainPositionAtQRCodePoint.setCancelMaintainPositionAtSpecificQRCodePoint();
+commands.push_back(commandCancelMaintainPositionAtQRCodePoint);
 
 
-
-command commandWaitForQRCode;
-commandWaitForQRCode.setWaitUntilSpecificQRCodeIsSpottedCommand("BigQRCode", 3.0);
-myARDroneControllerNode->addCommand(commandWaitForQRCode);
-*/
-
-
-/*
-command commandLookAtQRCodePoint;
-commandLookAtQRCodePoint.setMaintainOrientationTowardSpecificQRCode("BigQRCode");
-myARDroneControllerNode->addCommand(commandLookAtQRCodePoint);
-*/
-
-
-//Go to -1.0, 0 4.0
-/*
-command commandGoToQRCodePoint;
-commandGoToQRCodePoint.setMaintainPositionAtSpecificQRCodePoint("BigQRCode", 0.0, -0.5, 4.0);
-myARDroneControllerNode->addCommand(commandGoToQRCodePoint);
-*/
-
-command commandSetHorizontalHeading;
-commandSetHorizontalHeading.setHorizontalHeadingCommand(0.05, 0.0);
-myARDroneControllerNode->addCommand(commandSetHorizontalHeading);
-
-/*
-command commandWait;
-commandWait.setWaitCommand(2.0);
-myARDroneControllerNode->addCommand(commandWait);
-*/
-
-command commandSetAngularVelocity;
-commandSetAngularVelocity.setAngularVelocityCommand(0.5);
-myARDroneControllerNode->addCommand(commandSetAngularVelocity);
-
-
-command commandWait0;
-commandWait0.setWaitCommand(6.0);
-myARDroneControllerNode->addCommand(commandWait0);
-
-
-
-command commandLanding;
-commandLanding.setLandingCommand();
-printf("Adding landing command\n");
-myARDroneControllerNode->addCommand(commandLanding);
-printf("Landing command added\n");
-
-
-
-/*
-command commandSetHorizontalHeading;
-commandSetHorizontalHeading.setHorizontalHeadingCommand(0.025, 0.0);
-myARDroneControllerNode->addCommand(commandSetHorizontalHeading);
-
-command commandSetAngularVelocity;
-commandSetAngularVelocity.setAngularVelocityCommand(0.5);
-myARDroneControllerNode->addCommand(commandSetAngularVelocity);
-
-//Go to -1.0, 0 4.0
-command commandGoToQRCodePoint;
-commandGoToQRCodePoint.setMaintainPositionAtSpecificQRCodePoint("BigQRCode", -1.0, 0.0, 4.0);
-myARDroneControllerNode->addCommand(commandGoToQRCodePoint);
-*/
-
-
-/*
-
-//command commandWaitUntilTagSpotted;
-//commandWaitUntilTagSpotted.setWaitUntilTagIsSpottedCommand(6.0);
-//myARDroneControllerNode->addCommand(commandWaitUntilTagSpotted);
-
-command commandSetHorizontalHeading2;
-commandSetHorizontalHeading2.setHorizontalHeadingCommand(0.00, 0.0);
-myARDroneControllerNode->addCommand(commandSetHorizontalHeading2);
-
-
-
-//command commandSetHomeInOnTag;
-//commandSetHomeInOnTag.setHomeInOnTagCommand();
-//myARDroneControllerNode->addCommand(commandSetHomeInOnTag);
-
-
-command commandWait;
-commandWait.setWaitCommand(16.0);
-myARDroneControllerNode->addCommand(commandWait);
+command commandCancelLookAtQRCodePoint;
+commandCancelLookAtQRCodePoint.setCancelMaintainOrientationTowardSpecificQRCode();
+commands.push_back(commandCancelLookAtQRCodePoint);
 
 
 
 
-
-
-
-
-
-
-
-*/
-
-while(myARDroneControllerNode->commandQueueSize() > 0)
+//Serialize and send commands
+ardrone_command::commandInterface interface;
+for(int i=0; i<commands.size(); i++)
 {
+auto commandMessage = commands[i].serialize();
+ardrone_command::commandInterface::Request request;
+request.command = commandMessage;
+
+ardrone_command::commandInterface::Response response;
+
+ros::service::call("/ardrone_command/commandInterface", request, response);
 }
 
-return 0;
-}
-
-/*
-This function is used to provide a service which allows other processes on the network to send commands to the AR Drone controlled by this application.  The function will send a response of "true" if the command was successfully added to the queue and "false" otherwise.
-@param inputRequest: The request, which contains a serialized command for the AR drone
-@param inputResponse: The buffer for the function to place the response in
-@return: Always true
-
-@exceptions: This function can throw exceptions.
-*/
-/*
-bool commandReceivedFromNetwork(ardrone_command::commandInterface::Request &inputRequest, ardrone_command::commandInterface::Response &inputResponse)
-{
-auto receivedCommands = deserialize_commands(inputRequest.command);
 
 
-for(int i=0; i<receivedCommands.size(); i++)
-{
-SOM_TRY
-myARDroneControllerNode->addCommand(receivedCommands[i]);
-SOM_CATCH("Error, could not add command\n")
-}
-
-inputResponse.received = true;
+ros::shutdown();
 
 return true;
 }
 
-*/
+
 
 

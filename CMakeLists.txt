@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(ardrone_command)
+project(ardrone_command_test)
 
 #Get c++11
 ADD_DEFINITIONS(-std=c++11)
@@ -16,24 +16,9 @@ find_package(catkin REQUIRED COMPONENTS
   ardrone_autonomy
   sensor_msgs
   cv_bridge
-
+  ardrone_command
 )
 
-
- add_message_files(
-   DIRECTORY msg
-   FILES
-   serialized_ardrone_command_part.msg
-   serialized_ardrone_command.msg
- )
-
-add_service_files(
-    DIRECTORY srv
-    FILES
-    commandInterface.srv
-)
-
-generate_messages(DEPENDENCIES geometry_msgs std_msgs)
 
 
 
@@ -133,10 +118,9 @@ include_directories(${CATKIN_DEVEL_PREFIX}/ardrone_command ${catkin_INCLUDE_DIRS
 
 FILE(GLOB SOURCEFILES src/*.cpp src/*.c)
 
-add_executable(ardrone_command ${SOURCEFILES})
-target_link_libraries(ardrone_command ${catkin_LIBRARIES} zbar opencv_core opencv_highgui opencv_calib3d)
+add_executable(ardrone_command_test ${SOURCEFILES})
+target_link_libraries(ardrone_command_test ${catkin_LIBRARIES} zbar opencv_core opencv_highgui opencv_calib3d)
 
-add_dependencies(ardrone_command ardrone_command_generate_messages_cpp ${PROJECT_NAME}_gencpp)
 
 #add_dependencies(talker ${catkin_EXPORTED_TARGETS})
 
