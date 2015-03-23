@@ -1,8 +1,0 @@
-prefix=/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command_test/devel
-
-Name: ardrone_command_test
-Description: Description of ardrone_command_test
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/hewhosurvives/c++/randomProjects/ros/catkin_ws/src/ardrone_command_test/devel/lib 
-Requires: message_runtime ardrone_autonomy

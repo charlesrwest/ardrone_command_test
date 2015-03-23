@@ -1,6 +1,5 @@
- 
+This project is a simple ROS node that demonstrates how to send commands to ardrone_command (https://github.com/charlesrwest/ardrone_command).
 
+The ardrone_application_node.cpp file has a main function that sends a bunch of commands to ardrone_command using service calls.  Similar code can be used with your node/application to control the AR Drone using ardrone_command.
 
-ARDrone_autonomy required libraries:
-
-libsdl1.2-dev
+This package requires ardrone_command to be installed and configured.  It can then be build by placing it in the catkin_ws/src directory and running catkin_make in the catkin_ws directory.
