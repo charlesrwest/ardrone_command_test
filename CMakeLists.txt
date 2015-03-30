@@ -35,7 +35,7 @@ catkin_package(
 #  LIBRARIES beginner_tutorials
 #  CATKIN_DEPENDS roscpp rospy std_msgs
 #  DEPENDS system_lib
-CATKIN_DEPENDS message_runtime ardrone_autonomy
+CATKIN_DEPENDS message_runtime ardrone_autonomy ardrone_command
 )
 
 
@@ -110,7 +110,9 @@ CATKIN_DEPENDS message_runtime ardrone_autonomy
 
 #message('Yowser' ${ardrone_autonomy_INCLUDE_DIRS})
 # Add headers directory
-include_directories(${CATKIN_DEVEL_PREFIX}/ardrone_command ${catkin_INCLUDE_DIRS})
+include_directories(${CATKIN_DEVEL_PREFIX}/ardrone_command ${catkin_INCLUDE_DIRS} ${ardrone_command_INCLUDE_DIRS} ${ARDRONE_COMMAND_INCLUDE_DIR})
+
+message("Catkin GRRR: " ${ardrone_command_INCLUDE_DIRS})
 
 #include_directories(include)
 
