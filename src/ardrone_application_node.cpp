@@ -102,7 +102,8 @@ commandGoToQRCodePoint.setMaintainPositionAtSpecificQRCodePoint("BigQRCode", .5,
 commands.push_back(commandGoToQRCodePoint);
 
 
-command QRCodePointWait1; QRCodePointWait1.setWaitUntilPositionAtSpecificQRCodePointReachedCommand(10.0);
+
+command QRCodePointWait1; QRCodePointWait1.setWaitUntilPositionAtSpecificQRCodePointReachedCommand(100.0);
 commands.push_back(QRCodePointWait1);
 
 command commandGoToQRCodePoint2;
@@ -132,8 +133,9 @@ commands.push_back(commandGoToQRCodePoint5);
 
 commands.push_back(QRCodePointWait1);
 
+
 command commandWait2;
-commandWait2.setWaitCommand(20.0);
+commandWait2.setWaitCommand(2.0);
 commands.push_back(commandWait2);
 
 command commandCancelMaintainPositionAtQRCodePoint;
